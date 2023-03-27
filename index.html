@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="userInput.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icons/favicon_picnic_basket.png" />
+    <title>Green Picnic</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        
+        <header>
+            <h1>Welcome to Green PicNic <img id="logo" src="icons/favicon_picnic_basket.png"
+                    alt="green picnic basket icon"></h1>
+            <h2 class="subtitle">A game for making sustainable choices</h2>
+        </header>
+    
+    <div class="container">
+        <h3>Aim of the game</h3>
+        <p id="gametxt">It's finally the weekend and it's a beautiful day for you and your dog to go out.
+            You have decided that you would like to meet your friend at the park for a picnic. <br>
+            Your tasks are to prepare the picnic basket, travel to the park and then dispose of any waste you have from
+            the
+            picnic.
+            Throughout the game, your choices will affect the environental factors known as Carbon Footprint<img
+                class="iconsize_index" src="icons/carbon_footprint_icon.svg"
+                alt="pink footprint with co2 written inside to symbolise carbon footprint icon">, Water Pollution<img
+                class="iconsize_index" src="icons/water_pollution_icon.svg"
+                alt="blue waterdrop with bacteria inside to symbolise water pollution icon">, Habitat Destruction<img
+                class="iconsize_index" src="icons/deforestation_icon.svg"
+                alt="green tree stump with axe in the top to symbolise deforestation icon">and
+            Waste<img class="iconsize_index" src="icons/waste_icon.svg" alt="grey bin to symbolise general waste icon">.
+            It is your job to make sure the environmental factors are as low as possible whilst getting to the park to
+            enjoy
+            your picnic with a friend.
+        </p>
+    </div>
+        <form>
+            <div>
+                <label for="nameInput">What is your name?</label><br>
+                <input type="text" id="nameInput" placeholder="John" required><br>
+                <div class="flexbtns">
+                    <input type="submit" id="startBtn" value="Start" required>
+                    <input type="reset" id="forgetBtn" value="Reset">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="flexfooter">
+            <p>Module: SET08101<br>Module: Web Technologies</p>
+            <p>Matriculation No: 40117527</p>
+            <p>Created By Catherine Campbell &copy; 2021</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

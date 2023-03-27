@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="progress_bar_settings.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="icons/favicon_picnic_basket.png" />
+    <title>Green Picnic</title>
+    <!-- Disable Back Button in Browser code implemented from cluemediator.com -->
+    <script type="text/javascript">
+        function disableBack() { window.history.forward(); }
+        setTimeout("disableBack()", 0);
+        window.onunload = function () { null };
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>Welcome to Green PicNic</h1>
+            <h2 class="subtitle">A game for making sustainable choices</h2>
+        </header>
+
+        <p id="choicetxt">You are a... </p>
+
+        <section>
+            <div id="flexbars_vertical">
+                <!-- Progress Bars code implemented using W3Schools.com example as basis -->
+                <div class="flex_progressbox_result">
+                    <div class="progressbox">
+                        <img class="iconsize" src="icons/carbon_footprint_icon.svg"
+                            alt="pink footprint with co2 written inside to symbolise carbon footprint icon">
+                        <div id="co2barline" class="myProgress">
+                            <div id="co2barcolor" class="bar"></div>
+                        </div>
+                        <div class="centerresulttitle">
+                            <p class="result">carbon footprint</p>
+                        </div>
+                    </div>
+                    <div class="centerresult">
+                        <p id="co2result" class="result"></p>
+                    </div>
+                </div>
+
+                <div class="flex_progressbox_result">
+                    <div class="progressbox">
+                        <img class="iconsize" src="icons/water_pollution_icon.svg"
+                            alt="blue waterdrop with bacteria inside to symbolise water pollution icon">
+                        <div id="waterbarline" class="myProgress">
+                            <div id="waterbarcolor" class="bar"></div>
+                        </div>
+                        <div class="centerresulttitle">
+                            <p class="result">water pollution</p>
+                        </div>
+                    </div>
+                    <div class="centerresult">
+                        <p id="waterresult" class="result"></p>
+                    </div>
+                </div>
+
+                <div class="flex_progressbox_result">
+                    <div class="progressbox">
+                        <img class="iconsize" src="icons/waste_icon.svg" alt="grey bin to symbolise general waste icon">
+                        <div id="binbarline" class="myProgress">
+                            <div id="binbarcolor" class="bar"></div>
+                        </div>
+                        <div class="centerresulttitle">
+                            <p class="result">waste</p>
+                        </div>
+                    </div>
+                    <div class="centerresult">
+                        <p id="binresult" class="result"></p>
+                    </div>
+                </div>
+
+                <div class="flex_progressbox_result">
+                    <div class="progressbox">
+                        <img class="iconsize" src="icons/deforestation_icon.svg"
+                            alt="green tree stump with axe in the top to symbolise deforestation icon">
+                        <div id="treebarline" class="myProgress">
+                            <div id="treebarcolor" class="bar"></div>
+                        </div>
+                        <div class="centerresulttitle">
+                            <p class="result">deforestation</p>
+                        </div>
+                    </div>
+                    <div class="centerresult">
+                        <p id="treeresult" class="result"></p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <button id="restartBtn">Restart</button>
+
+    </div>
+
+    <script>
+        // On page load, get results from localStorage and display them to the user
+        window.onload = function barResult() {
+            const co2Result = document.querySelector('#co2result')
+            const co2Bar = localStorage.getItem("co2Bar", co2BarValue);
+            if (co2Bar) {
+                co2Result.textContent = `${co2Bar}` + "%";
+            }
+
+            const waterResult = document.querySelector('#waterresult')
+            const waterBar = localStorage.getItem("waterBar", waterBarValue);
+            if (waterBar) {
+                waterResult.textContent = `${waterBar}` + "%";
+            }
+
+            const binResult = document.querySelector('#binresult')
+            const binBar = localStorage.getItem("binBar", binBarValue);
+            if (binBar) {
+                binResult.textContent = `${binBar}` + "%";
+            }
+
+            const treeResult = document.querySelector('#treeresult')
+            const treeBar = localStorage.getItem("treeBar", treeBarValue);
+            if (treeBar) {
+                treeResult.textContent = `${treeBar}` + "%";
+            }
+        }
+
+        // Change paragraph based on user's result
+        const choiceTxt = document.querySelector("#choicetxt");
+        if (localStorage.getItem('treeBar') <= '20') {
+            choiceTxt.textContent = `Great Job! You are a... Tree Hugger. Keep it up.`;
+        }
+
+        if (localStorage.getItem('co2Bar') <= '30') {
+            choiceTxt.textContent = `Great Job! You are a... Carbon Crusher. Keep it up.`;
+        }
+
+        if (localStorage.getItem('co2Bar') >= '60') {
+            choiceTxt.textContent = `Oh no! You are a... Carbon Burner. Don't worry, there is still time to save the planet. Try again.`;
+        }
+
+        if (localStorage.getItem('binBar') >= '70') {
+            choiceTxt.textContent = `Oh no! You are a... Litter Bug. Don't worry, there is still time to save the planet. Try again.`;
+        }
+
+        const restartBtn = document.querySelector('#restartBtn')
+        // Onclick, do the following.
+        restartBtn.addEventListener("click", function () {
+            localStorage.clear();
+            // Redirect user to next page after selection
+            window.location.href = "index.html";
+        })
+
+    </script>
+
+    <footer>
+        <div class="flexfooter">
+            <p>Module: SET08101<br>Module: Web Technologies</p>
+            <p>Matriculation No: 40117527</p>
+            <p>Created By Catherine Campbell &copy; 2021</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
