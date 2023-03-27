@@ -47,7 +47,7 @@ body{
 }
 
 header{
-    margin-top: 20px;
+    padding-top: 20px;
     margin-bottom: 5vh;
 }
 
@@ -143,7 +143,7 @@ input[type=submit], input[type=reset], button:hover{
     margin-bottom: 5vh;
 }
 
-/* Flex arrangement for results page */
+/* Flex arrangement for results pages */
 
 #flexbars_vertical{
     height: 350px;
@@ -224,49 +224,53 @@ input[type=submit], input[type=reset], button:hover{
 
 #co2barline{
     width: 150px;
+    height: 3em;
     border-radius: 15px 15px 15px 15px;
     border: 2px solid #E83764;
     overflow: hidden;
 }
 
 #co2barcolor{
-    height: 3em;
+    height: 4em;
     background-color: #E83764;
 }
 
 #waterbarline{
     width: 150px;
+    height: 3em;
     border-radius: 15px 15px 15px 15px;
     border: 2px solid #36A9E1;
     overflow: hidden;
 }
 
 #waterbarcolor{
-    height: 30px;
+    height: 4em;
     background-color: #36A9E1;
 }
 
 #binbarline{
     width: 150px;
+    height: 3em;
     border-radius: 15px 15px 15px 15px;
     border: 2px solid #706F6F;
     overflow: hidden;
 }
 
 #binbarcolor{
-    height: 30px;
+    height: 4em;
     background-color: #706F6F;
 }
 
 #treebarline{
     width: 150px;
+    height: 3em;
     border-radius: 15px 15px 15px 15px;
     border: 2px solid #14A85A;
     overflow: hidden;
 }
 
 #treebarcolor{
-    height: 30px;
+    height: 4em;
     background-color: #14A85A;
 }
 
@@ -326,6 +330,7 @@ figcaption.txtcontainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 6em;
 
 }
 
