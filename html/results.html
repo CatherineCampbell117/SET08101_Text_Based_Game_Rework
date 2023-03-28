@@ -115,6 +115,9 @@
             if (waterBar) {
                 waterResult.textContent = `${waterBar}` + "%";
             }
+            else {
+                waterResult.textContent = "50%"
+            }
 
             const binResult = document.querySelector('#binresult')
             const binBar = localStorage.getItem("binBar", binBarValue);
