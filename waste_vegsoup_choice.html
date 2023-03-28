@@ -87,7 +87,7 @@
 
         <!-- Polaroid Images code implemented using W3Schools.com example. Amended tags from divs for more semantic structure and meaning -->
         <div class="fleximages">
-            <figure class="polaroid">
+            <figure id="food_caddy" class="polaroid">
                 <img src="images/waste/apple_bin_600x400.jpg" alt="person putting apple skins into a food waste caddy">
                 <figcaption class="txtcontainer">
                     Put in food waste caddy
@@ -114,6 +114,49 @@
     <script>
         const save = document.querySelector('#save')
         const gwaste_bin = document.querySelector('#gwaste_bin')
+        const food_caddy = document.querySelector('#food_caddy')
+
+      // Onclick, do the following.
+      food_caddy.addEventListener("click", function () {
+            // treeValue increases by 5
+            treeBarValue -= 5;
+            // waterBarValue increases by 5
+            binBarValue += 5;
+            // New Value is stored in locaStorage for each bar
+            localStorage.setItem('treeBar', treeBarValue);
+            localStorage.setItem('binBar', binBarValue);
+            // If Statement to determine next Waste page
+            if (localStorage.getItem('snackChoice') === 'Crisps') {
+                window.location.href = "waste_crisps_choice.html"
+            }
+            if (localStorage.getItem('snackChoice') === 'Apple and Peanut Butter') {
+                window.location.href = "waste_applepeanut_choice.html"
+            }
+            if (localStorage.getItem('snackChoice') === 'Nutrigrain Bar') {
+                window.location.href = "waste_nutrigrain_choice.html"
+            }
+        });
+
+      // Onclick, do the following.
+      gwaste_bin.addEventListener("click", function () {
+            // treeValue increases by 5
+            treeBarValue += 5;
+            // waterBarValue increases by 5
+            binBarValue += 5;
+            // New Value is stored in locaStorage for each bar
+            localStorage.setItem('treeBar', treeBarValue);
+            localStorage.setItem('binBar', binBarValue);
+            // If Statement to determine next Waste page
+            if (localStorage.getItem('snackChoice') === 'Crisps') {
+                window.location.href = "waste_crisps_choice.html"
+            }
+            if (localStorage.getItem('snackChoice') === 'Apple and Peanut Butter') {
+                window.location.href = "waste_applepeanut_choice.html"
+            }
+            if (localStorage.getItem('snackChoice') === 'Nutrigrain Bar') {
+                window.location.href = "waste_nutrigrain_choice.html"
+            }
+        });
 
         // Onclick, do the following.
         save.addEventListener("click", function () {
@@ -136,26 +179,6 @@
             }
         });
 
-        // Onclick, do the following.
-        gwaste_bin.addEventListener("click", function () {
-            // treeValue increases by 5
-            treeBarValue += 5;
-            // waterBarValue increases by 5
-            binBarValue += 5;
-            // New Value is stored in locaStorage for each bar
-            localStorage.setItem('treeBar', treeBarValue);
-            localStorage.setItem('binBar', binBarValue);
-            // If Statement to determine next Waste page
-            if (localStorage.getItem('snackChoice') === 'Crisps') {
-                window.location.href = "waste_crisps_choice.html"
-            }
-            if (localStorage.getItem('snackChoice') === 'Apple and Peanut Butter') {
-                window.location.href = "waste_applepeanut_choice.html"
-            }
-            if (localStorage.getItem('snackChoice') === 'Nutrigrain Bar') {
-                window.location.href = "waste_nutrigrain_choice.html"
-            }
-        });
     </script>
 
     <footer>

@@ -86,8 +86,7 @@
         </div>
 
         <div class="fleximages">
-            <figure class="polaroid">
-                <a href="">
+            <figure id="recycle" class="polaroid">
                     <img src="images/waste/various_recycingbins_600x400.jpg"
                         alt="general, plastic, cans, paper and mixed recycling bins">
                     <figcaption class="txtcontainer">
@@ -116,6 +115,28 @@
     <script>
         const wash_recycle = document.querySelector('#wash_recycle')
         const gwaste_bin = document.querySelector('#gwaste_bin')
+        const recycle = document.querySelector('#recycle')
+
+        // Onclick, do the following.
+        recycle.addEventListener("click", function () {
+            // treeValue decreases by 5
+            treeBarValue -= 5;
+            // binValue decreases by 5
+            binBarValue += 5;
+            // New Value is stored in locaStorage for each bar
+            localStorage.setItem('treeBar', treeBarValue);
+            localStorage.setItem('binBar', binBarValue);
+            // If Statement to determine next Waste page
+            if (localStorage.getItem('snackChoice') === 'Crisps') {
+                window.location.href = "waste_crisps_choice.html"
+            }
+            if (localStorage.getItem('snackChoice') === 'Apple and Peanut Butter') {
+                window.location.href = "waste_applepeanut_choice.html"
+            }
+            if (localStorage.getItem('snackChoice') === 'Nutrigrain Bar') {
+                window.location.href = "waste_nutrigrain_choice.html"
+            }
+        });
 
         // Onclick, do the following.
         wash_recycle.addEventListener("click", function () {

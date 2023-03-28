@@ -87,8 +87,7 @@
 
         <div class="fleximages">
             <!-- Polaroid Images code implemented using W3Schools.com example. Amended tags from divs for more semantic structure and meaning -->
-            <figure class="polaroid">
-                <a href="">
+            <figure id="food_caddy" class="polaroid">
                     <img src="images/waste/apple_bin_600x400.jpg"
                         alt="person putting apple skins into a food waste caddy">
                     <figcaption class="txtcontainer">
@@ -117,12 +116,13 @@
     <script>
         const save = document.querySelector('#save')
         const gwaste_bin = document.querySelector('#gwaste_bin')
+        const food_caddy = document.querySelector('#food_caddy')
 
-        // Onclick, do the following.
-        save.addEventListener("click", function () {
-            // treeValue decreases by 5
+       // Onclick, do the following.
+       food_caddy.addEventListener("click", function () {
+            // treeValue increases by 5
             treeBarValue -= 5;
-            // binValue decreases by 5
+            // waterBarValue increases by 5
             binBarValue -= 5;
             // New Value is stored in locaStorage for each bar
             localStorage.setItem('treeBar', treeBarValue);
@@ -159,6 +159,28 @@
                 window.location.href = "waste_nonpapertowel_choice.html"
             }
         });
+
+         // Onclick, do the following.
+         save.addEventListener("click", function () {
+            // treeValue decreases by 5
+            treeBarValue -= 5;
+            // binValue decreases by 5
+            binBarValue -= 5;
+            // New Value is stored in locaStorage for each bar
+            localStorage.setItem('treeBar', treeBarValue);
+            localStorage.setItem('binBar', binBarValue);
+            // If Statement to determine next Waste page
+            if (localStorage.getItem('cleaningChoice') === 'Wipes') {
+                window.location.href = "waste_wipes_choice.html"
+            }
+            if (localStorage.getItem('cleaningChoice') === 'Kitchen Roll') {
+                window.location.href = "waste_papertowel_choice.html"
+            }
+            if (localStorage.getItem('cleaningChoice') === 'Reusable Towels') {
+                window.location.href = "waste_nonpapertowel_choice.html"
+            }
+        });
+
     </script>
 
 
