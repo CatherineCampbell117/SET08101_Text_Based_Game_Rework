@@ -1,0 +1,456 @@
+/* TEXT */
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+html{
+    height: 100%;
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    position: relative;
+    margin: 0;
+    min-height: 100%;
+    padding-bottom: 6.74rem;
+    box-sizing: inherit;
+}
+
+.wrapper{
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+}
+
+.container{
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container_bars{
+    width: 60%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* HOME PAGE */
+
+.basket{
+    width: 50px;
+    margin: 10px 20px 10px 10px;
+}
+
+header{
+    padding-top: 20px;
+    margin-bottom: 5vh;
+}
+
+h1{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    font-size: 3.2rem;
+    margin: auto;
+}
+
+#logo{
+    width: 40px;
+}
+
+h2.subtitle{
+    font-size: 1.8rem;
+}
+
+h2, h3{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    font-size: 2.4rem;
+    margin: auto;
+}
+
+#gametxt{
+    font-size: 1.6rem;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    border: 2.4px solid #0D5957;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+form{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    margin: 5rem 0;
+}
+
+.flexbtns{
+    display: flex;
+    justify-content: center;
+}
+
+label{
+    font-size: 1.9rem;
+}
+
+input[type=text] {
+    border: 2px solid #0D5957;
+    border-radius: 10px;
+    outline: none;
+    resize: none;
+    overflow: hidden;
+    padding: 16px; 
+    margin: 15px auto 20px auto;
+}
+
+::placeholder{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+/* START BUTTON */
+
+input[type=submit], input[type=reset],  button{
+    color: #0D5957;
+    text-decoration: none;
+    border: 2.4px solid #0D5957;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 8px 32px 8px 32px;
+    margin: 5px;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 500;
+    font-size: 1.6rem;
+    margin-bottom: 6em;
+}
+
+input[type=submit], input[type=reset], button:hover{
+    color: white;
+    background-color: #0D5957;
+    transition: all 0.3s ease 0s;
+}
+
+/* PAGE TWO - DRINKS CHOICE 1 */
+
+#headerpage2{
+    margin-bottom: 5vh;
+}
+
+/* FLEX ARRANGEMENT FOR RESULTS PAGE */
+
+#flexbars_vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 80%;
+    max-width: 700px;
+    margin: 4em auto 4em auto;
+}
+
+.progressbox_result{
+    display: flex;
+}
+
+.flex_progressbox_result{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex_progressbox_result + .flex_progressbox_result{
+    padding-top: 2em;
+}
+
+.centerresult{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centerresulttitle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+  }
+
+#treeresult{
+    color: #14A85A;
+}
+
+#co2result{
+    color: #E83764;
+}
+
+#binresult{
+    color: #706F6F;
+}
+
+#waterresult{
+    color: #36A9E1;
+}
+
+.result{
+    text-transform: uppercase;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+/* PROGRESS BARS */
+
+#flexbars{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.iconsize{
+    padding: 5px;
+    width: 40px;
+    height: 24px;
+}
+
+.iconsize_index{
+    width: 40px;
+    height: 24px;
+}
+
+.progressbox{
+    display: flex;
+}
+
+.padding_top{
+    padding-top: 3em;
+}
+
+#co2barline{
+    width: 150px;
+    min-width: 150px;
+    height: 3em;
+    border-radius: 15px 15px 15px 15px;
+    border: 2px solid #E83764;
+    overflow: hidden;
+}
+
+#co2barcolor{
+    height: 4em;
+    background-color: #E83764;
+}
+
+#waterbarline{
+    width: 150px;
+    min-width: 150px;
+    height: 3em;
+    border-radius: 15px 15px 15px 15px;
+    border: 2px solid #36A9E1;
+    overflow: hidden;
+}
+
+#waterbarcolor{
+    height: 4em;
+    background-color: #36A9E1;
+}
+
+#binbarline{
+    width: 150px;
+    min-width: 150px;
+    height: 3em;
+    border-radius: 15px 15px 15px 15px;
+    border: 2px solid #706F6F;
+    overflow: hidden;
+}
+
+#binbarcolor{
+    height: 4em;
+    background-color: #706F6F;
+}
+
+#treebarline{
+    width: 150px;
+    min-width: 150px;
+    height: 3em;
+    border-radius: 15px 15px 15px 15px;
+    border: 2px solid #14A85A;
+    overflow: hidden;
+}
+
+#treebarcolor{
+    height: 4em;
+    background-color: #14A85A;
+}
+
+/* TEXT */
+
+#choicetxt{
+    font-size: 1.6rem;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    border: 2.4px solid #0D5957;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+}
+
+/* CHOICES - IMAGES/TEXT */
+
+img{
+    width: 100%;
+}
+
+figure.polaroid{
+    width: 300px;
+    background-color: #0D5957;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.polaroid_park{
+    width: 300px;
+    margin: 3% 3% 3% 3%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+figcaption.txtcontainer{
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.fleximages{
+    width: 80%;
+    max-width: 800px;
+    margin: 5em auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 6em;
+}
+
+.polaroid a{
+    text-decoration: none;
+}
+
+.polaroid.flex_item{
+    margin: 4em 0 0 0;
+}
+
+.polaroid:hover{
+    transform: scale(1.1); /* (110% zoom)*/
+    transition: 0.3s;
+}
+
+.flexfooter{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: black;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+
+footer p{
+    font-size: 1.4rem;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 400;
+    color: white;
+    padding: 5px;
+    margin: auto;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 500px){
+    #flexbars{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+
+    }
+    .progressbox{
+        width: 100%;
+        margin-bottom: 5px;
+        margin: 0 auto;
+    }
+    
+    .padding_top_smallscreen{
+        padding-top: 3em;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .fleximages{
+        justify-content: center;
+    }
+
+    .polaroid.flex_item_two{
+        margin: 3em 0 0 0;
+    }
+
+    .polaroid.flex_item{
+        margin: 3em 0 0 0;
+    }
+
+    .progressbox_result{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex_progressbox_result + .flex_progressbox_result{
+        padding-top: 2em;
+    }
+
+    .flex_progressbox_result{
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 801px){
+    .fleximages{
+        justify-content: space-around;
+    }
+    }
+
+@media only screen and (min-width: 1000px) {
+    .fleximages{
+        flex-wrap: nowrap;
+    }
+
+    .polaroid.flex_item, .polaroid.flex_item_two{
+        margin: 0 0 0 5em;
+    }
+
+    .flexbars_row{
+        display: flex;
+    }
+
+    div .padding_top{
+        padding: 0;
+    }
+
+}

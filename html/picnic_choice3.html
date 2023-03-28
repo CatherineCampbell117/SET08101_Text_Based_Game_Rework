@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <script src="../js/progress_bar_settings.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../icons/favicon_picnic_basket.png" />
+    <title>Green Picnic</title>
+    <!-- Disable Back Button in Browser code implemented from cluemediator.com -->
+    <script type="text/javascript">
+        function disableBack() { window.history.forward(); }
+        setTimeout("disableBack()", 0);
+        window.onunload = function () { null };
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="headerpage2">
+            <h1>Welcome to Green PicNic</h1>
+            <h2 class="subtitle">A game for making sustainable choices</h2>
+        </header>
+
+        <section>
+            <div class="container_bars">
+              <div id="flexbars">
+              <!-- Progress Bars code implemented using W3Schools.com example as basis -->
+                <div class="flexbars_row">
+                  <div class="progressbox">
+                    <img class="iconsize" src="../icons/carbon_footprint_icon.svg"
+                      alt="pink footprint with co2 written inside to symbolise carbon footprint icon">
+                    <div id="co2barline" class="myProgress">
+                      <div id="co2barcolor" class="bar"></div>
+                    </div>
+                  </div>
+                
+                  <div class="progressbox padding_top">
+                    <img class="iconsize" src="../icons/water_pollution_icon.svg"
+                      alt="blue waterdrop with bacteria inside to symbolise water pollution icon">
+                    <div id="waterbarline" class="myProgress">
+                      <div id="waterbarcolor" class="bar"></div>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="flexbars_row padding_top_smallscreen">
+                  <div class="progressbox">
+                    <img class="iconsize" src="../icons/waste_icon.svg" alt="grey bin to symbolise general waste icon">
+                    <div id="binbarline" class="myProgress">
+                      <div id="binbarcolor" class="bar"></div>
+                    </div>
+                  </div>
+            
+      
+                  <div class="progressbox padding_top">
+                    <img class="iconsize" src="../icons/deforestation_icon.svg"
+                      alt="green tree stump with axe in the top to symbolise deforestation icon">
+                    <div id="treebarline" class="myProgress">
+                      <div id="treebarcolor" class="bar"></div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="container">
+        <!-- TypeWriter effect code implemented using W3Schools example. 'window.onload=' added instead of button for better usability -->
+        <p id="choicetxt"></p>
+        <script>
+            var i = 0;
+            var txt = 'Almost done. The final food item we have left to choose is our snack.';
+            var speed = 50;
+            window.onload =
+                function typeWriter() {
+                    if (i < txt.length) {
+                        document.getElementById("choicetxt").innerHTML += txt.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
+        </script>
+</div>
+
+        <!-- Polaroid Images code implemented using W3Schools.com example. Amended tags from divs for more semantic structure and meaning -->
+        <div class="fleximages">
+
+            <figure id="crisps" class="polaroid">
+                <img src="../images/snacks/crisps_600x400.jpg" alt="open packet of crisps">
+                <figcaption class="txtcontainer">
+                    Crisps
+                </figcaption>
+            </figure>
+
+            <figure id="apple_peanutbtr" class="polaroid flex_item_two">
+                <img src="../images/snacks/apple_peanutbutter_600x400.jpg" alt="sliced apple and peanut butter snack">
+                <figcaption class="txtcontainer">
+                    Apple and Peanut Butter
+                </figcaption>
+            </figure>
+
+
+            <figure id="nutrigrain_bar" class="polaroid flex_item">
+                <img src="../images/snacks/nutrigrain_bar_600x400.jpg" alt="multigrain cereal bar with strawberry filling">
+                <figcaption class="txtcontainer">
+                    Multigrain Bar
+                </figcaption>
+            </figure>
+
+        </div>
+    </div>
+
+    <script>
+        const crisps = document.querySelector('#crisps')
+        const apple_peanutbtr = document.querySelector('#apple_peanutbtr')
+        const nutrigrain_bar = document.querySelector('#nutrigrain_bar')
+
+        // Onclick, do the following.
+        crisps.addEventListener("click", function () {
+            // co2BarValue increases by 5
+            co2BarValue += 5;
+            // binBarValue increases by 5 
+            binBarValue += 5;
+            // New Value is stored in locaStorage for each bar
+            localStorage.setItem('binBar', binBarValue);
+            localStorage.setItem('co2Bar', co2BarValue);
+            // Redirect user to next page after selection
+            window.location.href = "picnic_choice4.html";
+            // Store snackChoice value
+            localStorage.setItem('snackChoice', 'Crisps');
+        });
+
+        // Onclick, do the following.
+        apple_peanutbtr.addEventListener("click", function () {
+            // co2BarValue decreases by 10
+            co2BarValue -= 10;
+            // New Value is stored in locaStorage for each bar
+            localStorage.setItem('co2Bar', co2BarValue);
+            // Redirect user to next page after selection
+            window.location.href = "picnic_choice4.html";
+            // Store snackChoice value
+            localStorage.setItem('snackChoice', 'Apple and Peanut Butter');
+        });
+
+        // Onclick, do the following.
+        nutrigrain_bar.addEventListener("click", function () {
+            // co2BarValue decreases by 5
+            co2BarValue -= 5;
+            // New Value is stored in locaStorage for each bar
+            localStorage.setItem('binBar', binBarValue);
+            // Redirect user to next page after selection
+            window.location.href = "picnic_choice4.html";
+            // Store snackChoice value
+            localStorage.setItem('snackChoice', 'Nutrigrain Bar');
+        });
+    </script>
+
+    <footer>
+        <div class="flexfooter">
+            <p>Module: SET08101<br>Module: Web Technologies</p>
+            <p>Matriculation No: 40117527</p>
+            <p>Created By Catherine Campbell &copy; 2021</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
