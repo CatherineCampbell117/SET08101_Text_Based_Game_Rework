@@ -129,6 +129,7 @@ input[type=submit], input[type=reset],  button{
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 500;
     font-size: 1.6rem;
+    margin-bottom: 6em;
 }
 
 input[type=submit], input[type=reset], button:hover{
@@ -143,20 +144,28 @@ input[type=submit], input[type=reset], button:hover{
     margin-bottom: 5vh;
 }
 
-/* Flex arrangement for results pages */
+/* FLEX ARRANGEMENT FOR RESULTS PAGE */
 
 #flexbars_vertical{
-    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    width: 700px;
-    margin: auto;
+    width: 80%;
+    max-width: 700px;
+    margin: 4em auto 4em auto;
+}
+
+.progressbox_result{
+    display: flex;
 }
 
 .flex_progressbox_result{
     display: flex;
     justify-content: space-between;
+}
+
+.flex_progressbox_result + .flex_progressbox_result{
+    padding-top: 2em;
 }
 
 .centerresult{
@@ -224,6 +233,7 @@ input[type=submit], input[type=reset], button:hover{
 
 #co2barline{
     width: 150px;
+    min-width: 150px;
     height: 3em;
     border-radius: 15px 15px 15px 15px;
     border: 2px solid #E83764;
@@ -237,6 +247,7 @@ input[type=submit], input[type=reset], button:hover{
 
 #waterbarline{
     width: 150px;
+    min-width: 150px;
     height: 3em;
     border-radius: 15px 15px 15px 15px;
     border: 2px solid #36A9E1;
@@ -250,6 +261,7 @@ input[type=submit], input[type=reset], button:hover{
 
 #binbarline{
     width: 150px;
+    min-width: 150px;
     height: 3em;
     border-radius: 15px 15px 15px 15px;
     border: 2px solid #706F6F;
@@ -263,6 +275,7 @@ input[type=submit], input[type=reset], button:hover{
 
 #treebarline{
     width: 150px;
+    min-width: 150px;
     height: 3em;
     border-radius: 15px 15px 15px 15px;
     border: 2px solid #14A85A;
@@ -309,10 +322,6 @@ figure.polaroid{
     overflow: hidden;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-/* .polaroid.flex_item_two{
-    margin-left: 4em;
-} */
   
 figcaption.txtcontainer{
     font-family: 'Chakra Petch', sans-serif;
@@ -331,7 +340,6 @@ figcaption.txtcontainer{
     flex-wrap: wrap;
     justify-content: center;
     margin-bottom: 6em;
-
 }
 
 .polaroid a{
@@ -342,10 +350,6 @@ figcaption.txtcontainer{
     margin: 4em 0 0 0;
 }
 
-/* .polaroid.flex_item_two{
-    margin: 4em 0 0 0;
-} */
-
 .polaroid:hover{
     transform: scale(1.1); /* (110% zoom)*/
     transition: 0.3s;
@@ -355,6 +359,8 @@ figcaption.txtcontainer{
     display: flex;
     justify-content: space-evenly;
 }
+
+/* FOOTER */
 
 footer{
     background-color: black;
@@ -375,6 +381,8 @@ footer p{
     margin: auto;
 }
 
+/* MEDIA QUERIES */
+
 @media only screen and (max-width: 500px){
     #flexbars{
         width: 100%;
@@ -394,12 +402,6 @@ footer p{
     }
 }
 
-/* @media only screen and (min-width: 800px){
-    .polaroid.flex_item{
-        margin: 0 0 0 4em;
-    }
-} */
-
 @media only screen and (max-width: 800px){
     .fleximages{
         justify-content: center;
@@ -412,15 +414,26 @@ footer p{
     .polaroid.flex_item{
         margin: 3em 0 0 0;
     }
+
+    .progressbox_result{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .flex_progressbox_result + .flex_progressbox_result{
+        padding-top: 2em;
+    }
+
+    .flex_progressbox_result{
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-width: 801px){
     .fleximages{
         justify-content: space-around;
     }
-    /* .polaroid.flex_item_two{
-        margin: 0 0 0 4em;
-    } */
     }
 
 @media only screen and (min-width: 1000px) {
