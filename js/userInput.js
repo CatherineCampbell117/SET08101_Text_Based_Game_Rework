@@ -10,7 +10,7 @@ window.addEventListener("load", function (e) {
 
     startBtn.addEventListener("click", function () {
         localStorage.setItem("name", nameInput.value);
-        window.location.href = "../html/picnic_choice1.html";
+        window.location.href = "../html/picnic_choice2.html";
     });
 
     forgetBtn.addEventListener("click", function () {
